@@ -1,4 +1,5 @@
 import endive.helpers as helpers
+import datetime
 
 def test_unique():
     items = [1,1,2,2,2,3,4,5,6,6,6,3,3,2]
@@ -23,3 +24,7 @@ def test_all_in():
     c = [7,8,9,10]
     assert helpers.all_in(a, b) == True
     assert helpers.all_in(c, b) == False
+
+def test_convert_to_epoch():
+    sample_dt = datetime.datetime(2014, 4, 1, 0, 0)
+    assert helpers.convert_to_epoch(sample_dt) == 1396328400

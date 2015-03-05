@@ -23,3 +23,7 @@ def all_in(a, b):
     Returns True if all the elements in A are in B. 
     """
     return len(intersect(a, b)) == len(a)
+
+def convert_to_epoch(dt):
+    return int(dt.strftime('%s'))
+    
